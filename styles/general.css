@@ -3,7 +3,6 @@
     --page_blue: rgb(171, 219, 245);
 }
 
-
 body {
     margin: 0;
 }
@@ -11,6 +10,7 @@ body {
 header {
     height: 15vh;
     width: 100%;
+    background-color: white;
 }
 
 *, *:before, *:after {
@@ -19,6 +19,7 @@ header {
 
 html {
     box-sizing: border-box;
+    background-color: var(--page_blue);
 }
 
 main {
@@ -73,11 +74,13 @@ main {
     min-width: 100px;
     background-color: var(--page_blue);
     font-size: large;
+    font-family: none;
     border-radius: 10px;
     margin: 25px;
     padding: 10px;
     grid-column: 3 / 4;
     grid-row: 1 / 2;
+    border: solid 2px black;
 }
 
 nav {
@@ -112,6 +115,83 @@ nav {
     /* align-items: stretch; */
     flex-grow: 2;
     align-self: flex-end;
+}
+
+/* LOGIN CSS */
+
+.container {
+  margin: 20px 0px 20px 0px;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    min-height: 300px; 
+    align-items: center;
+    text-align: center;
+    margin: 5% 20% 0 20%;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+
+.container input {
+  width: 280px;
+  height: 35px;
+  border: 0px;
+  outline: none;
+  font-size: 13px;
+  padding: 0px 10px 0px 10px;
+  border-bottom: 1px solid #aaa;
+  transition: 0.5s;
+}
+
+.container button {
+  width: 300px;
+  height: 45px;
+  outline: none;
+  border: none;
+  background-color: #000000;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.sign-up-link {
+  padding-bottom: 10px;
+}
+
+.sign-up-link a {
+  text-decoration: none;
+  color: gray;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: #000000;
+}
+
+label {
+  font-weight: 400;
+  float: left;
+}
+
+h2 {
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+
+@media screen and (max-width: 400px) {
+  .wrapper{
+    border: 0;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: none;
+  }
 }
 
 /* 610px: Minimun for nav bar */
