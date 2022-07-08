@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <title>Reciept Tracker | Add Reciept</title>
+  </head>
+  <body>
+    <header>
+      <div id="banner">
+        <img
+          src="images/Untitled_Artwork.png"
+          alt="Receipt Logo"
+          id="logo_img"
+        />
+        <button id="login_btn">Login</button>
+        <nav>
+          <div><a href="index.html" >Home</a></div>
+          <div><a class="active" href="add.html">Add Receipt</a></div>
+          <div><a>View All</a></div>
+          <form action="" id="search_bar">
+            <input type="search" placeholder="Search..." name="search" />
+            <button id="search_icon" type="submit"></button>
+          </form>
+        </nav>
+      </div>
+    </header>
+    <main>
+        <div id="addForm">
+            <h2>Add New Receipt</h2>
+            <form method="post">
+                <fieldset>
+                    <label for="store">Store</label>
+                    <input name="store" type="text">
+
+                    <label for="city">City</label>
+                    <input name="city" type="text">
+                    <label for="state">State</label>
+                    <input name="state" type="text">
+
+                    <label for="date">Date</label>
+                    <input name="date" type="date">
+                    <label for="total">Total</label>
+                    <span class="currency-symbol">$
+                    <input class="amount" name="total" type="number" placeholder="123.45"></span>
+                    <label for="purchase_type">Category</label>
+                    <select name="purchase_type">
+                        <option value="">Select a Category</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="gas">Gas</option>
+                        <option value="grocery">Groceries</option>
+                        <option value="rent">Rent</option>
+                        <option value="utilities">Utilities</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="imagefile">Upload Image</label>
+                    <input type="file" name="imagefile" id="imagefile">
+                    <button><input type="submit" name="addReceipt" id="addReceiptBtn"></button>
+                </fieldset>
+            </form>
+        </div>
+      
+    </main>
+    <footer></footer>
+  </body>
+</html>
