@@ -43,6 +43,15 @@ main {
     background-image: url("");
 }
 
+footer {
+    display: flex;
+    
+    justify-content: space-evenly;
+    padding: 2em 1em 1em 1em;
+    font-size: var(--small-font);
+    background: linear-gradient(to top, var(--logo_blue) 0%, var(--page_blue) 100%);
+}
+
 /* Toggle for different logo/navbar layout */
 #banner {
     display: flex;
