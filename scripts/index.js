@@ -22,7 +22,7 @@ function convertToText(res) {
  };
 
  async function loadHeaderFooter() {
-   const footer = await loadTemplate('footer.html');
+   const footer = await loadTemplate('../partials/footer.html');
    console.log("This is whatever is supposed to be in footer variable:" + footer);
    const footerTemplate = document.getElementById('footer');
    renderWithTemplate(footer, footerTemplate);
