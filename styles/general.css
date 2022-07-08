@@ -3,13 +3,12 @@
     --page_blue: rgb(171, 219, 245);
 }
 
-
 body {
     margin: 0;
 }
 
 header {
-    height: 15vh;
+    height: 11vh;
     width: 100%;
 }
 
@@ -22,16 +21,13 @@ html {
 }
 
 main {
+    height: 89vh;
+    position: relative;
+    top: 50px;
+}
+
+.gallery {
     background-color: var(--page_blue);
-    height: 80vh;
-}
-
-#seperator {
-    height: 35px;
-    width: 100%;
-}
-
-#gallery {
     border: dashed 2px red;
     display: flex;
     flex-wrap: wrap;
@@ -58,34 +54,57 @@ footer {
 
 /* Toggle for different logo/navbar layout */
 #banner {
-    /* display: flex;
-    align-items: flex-end; */
-    display: grid;
+    display: flex;
+    align-items: flex-end;
+    /* display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 150px auto auto;
-    height: 15vh;
-    /* margin-bottom: 35px; */
+    height: 15vh; */
+    margin-bottom: 35px;
+}
+
+#banner_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kaushan Script', cursive;
+    z-index: 1;
+}
+
+#banner_logo h1 {
+    z-index: 3;
+    cursor: default;
 }
 
 #logo_img {
     margin: 15px;
+    margin-bottom: 0;
+    margin-right: 10px;
     height: 120px;
     width: auto;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+    z-index: 3;
     /* border: solid 2px black; */
 }
 
 #login_btn {
     max-width: 150px;
     min-width: 100px;
-    background-color: var(--page_blue);
+    background-color: var(--logo_blue);
     font-size: large;
     border-radius: 10px;
     margin: 25px;
     padding: 10px;
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    /* grid-column: 3 / 4;
+    grid-row: 1 / 2; */
+}
+
+#login_btn:hover {
+    background-color: var(--page_blue);
 }
 
 nav {
@@ -95,8 +114,11 @@ nav {
     background-color: var(--logo_blue);
     padding: 10px;
     gap: 20px;
-    grid-column: 2 / 4;
-    grid-row: 2 / 3;
+    z-index: 2;
+    position: absolute;
+    top: 85px;
+    /* grid-column: 2 / 4;
+    grid-row: 2 / 3; */
 }
 
 #search_icon {
@@ -111,7 +133,7 @@ nav {
 }
 
 #search_bar input {
-    width: 70%;
+    width: 35%;
 }
 
 #search_bar {
