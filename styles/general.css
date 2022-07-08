@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Roboto+Slab:wght@400;500;600&display=swap');
+
 :root {
     --logo_blue: rgb(137, 173, 221);
     --page_blue: rgb(171, 219, 245);
+    --body_font: "Montserrat", Helvetica, sans-serif;
+    --header_font: "Roboto Slab", Slab;
 }
 
 
@@ -17,12 +21,25 @@ header {
     box-sizing: inherit;
 }
 
+h1,
+h2,
+h3,
+h4{
+    font-family: var(--header_font);
+}
+
+p,
+a,
+label{
+    font-family: var(--body_font);
+}
+
 html {
+    background-color: var(--page_blue);
     box-sizing: border-box;
 }
 
 main {
-    background-color: var(--page_blue);
     height: 80vh;
 }
 
@@ -113,6 +130,52 @@ nav {
     flex-grow: 2;
     align-self: flex-end;
 }
+
+
+/* ----------- ADD RECEIPT FORM -------------- */
+
+#addForm {
+    margin: 5em auto auto;
+    width: 50%;
+    
+}
+
+#addForm h2{
+    margin-top: 2em;
+    text-align: center;
+}
+
+#addForm form fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-color: white;
+}
+
+#addForm label, #addForm span {
+    margin: 3em 3em 10px;
+}
+
+.currency-symbol
+
+#addForm .amount{
+    width: 95%;
+    margin-top: -25px;
+}
+
+
+
+#addForm input, #addForm select {
+    border-radius: 4px solid black;
+    border: none;
+    border-bottom:1px solid black;
+    padding: .8em;
+    margin: 10px 3em ;
+    /* margin:10px 0 20px 0; */
+}
+
+
+
 
 /* 610px: Minimun for nav bar */
 @media screen and (min-width: 610px) {
