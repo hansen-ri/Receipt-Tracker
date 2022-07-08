@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/general.css" />
-    <title>Reciept Tracker | Home</title>
+    <script src="scripts/index.js" type="module"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <title>Home | Reciept Tracker</title>
   </head>
   <body>
     <header>
-      <div id="banner">
+      <div id="banner_logo">
+        <h1>Receipt</h1>
         <img
           src="images/Untitled_Artwork.png"
           alt="Receipt Logo"
@@ -25,12 +28,12 @@
             <button id="search_icon" type="submit"></button>
           </form>
         </nav>
+        <h1>Tracker</h1>
       </div>
     </header>
-    <div id="seperator"></div>
-    <main>
-      <h2>Page content</h2>
-      <div id="gallery">
+      <main>
+      <h3>Recent Entries:</h3>
+      <div class="gallery">
         <!-- Example receipt -->
         <div class="receipt_preview">
           <p class="receipt_retailer">Walmart</p>
@@ -70,7 +73,49 @@
         </div>
         <!--  -->
       </div>
+      <h3>Last Week:</h3>
+      <div class="gallery">
+        <div class="receipt_preview">
+          <p class="receipt_retailer">Wendy's</p>
+          <p class="receipt_type">Food</p>
+          <p class="receipt_total">$31.92</p>
+          <p class="receipt_date">Apr 5, 2022</p>
+        </div>
+        <div class="receipt_preview">
+          <p class="receipt_retailer">Cafe Rio</p>
+          <p class="receipt_type">Food</p>
+          <p class="receipt_total">$14.65</p>
+          <p class="receipt_date">Apr 4, 2022</p>
+        </div>
+      </div>
+      <h3>Last Month:</h3>
+      <div class="gallery">
+        <div class="receipt_preview">
+          <p class="receipt_retailer">Wendy's</p>
+          <p class="receipt_type">Food</p>
+          <p class="receipt_total">$31.92</p>
+          <p class="receipt_date">Apr 5, 2022</p>
+        </div>
+        <div class="receipt_preview">
+          <p class="receipt_retailer">Cafe Rio</p>
+          <p class="receipt_type">Food</p>
+          <p class="receipt_total">$14.65</p>
+          <p class="receipt_date">Apr 4, 2022</p>
+        </div>
+        <div class="receipt_preview">
+          <p class="receipt_retailer">Walmart</p>
+          <p class="receipt_type">Groceries</p>
+          <p class="receipt_total">$124.56</p>
+          <p class="receipt_date">Apr 12, 2022</p>
+        </div>
+        <div class="receipt_preview">
+          <p class="receipt_retailer">Domino's Pizza</p>
+          <p class="receipt_type">Food</p>
+          <p class="receipt_total">$34.12</p>
+          <p class="receipt_date">Apr 7, 2022</p>
+        </div>
+      </div>
     </main>
-    <footer></footer>
+    <footer id="footer"></footer>
   </body>
 </html>

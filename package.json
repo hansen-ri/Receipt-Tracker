@@ -1,0 +1,24 @@
+{
+  "name": "receipt-tracker",
+  "version": "1.0.0",
+  "description": "WDD 330 Final Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hansen-ri/Receipt-Tracker.git"
+  },
+  "author": "Riley Hansen, Kaylene Ellinger, Anita Achee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hansen-ri/Receipt-Tracker/issues"
+  },
+  "homepage": "https://github.com/hansen-ri/Receipt-Tracker#readme",
+  "dependencies": {
+    "nodemon": "^2.0.19",
+    "snowpack": "^3.8.8"
+  }
+}
