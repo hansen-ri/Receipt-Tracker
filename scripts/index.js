@@ -22,10 +22,15 @@ function convertToText(res) {
  };
 
  async function loadHeaderFooter() {
-   const footer = await loadTemplate('../partials/footer.html');
-   console.log("This is whatever is supposed to be in footer variable:" + footer);
-   const footerTemplate = document.getElementById('footer');
-   renderWithTemplate(footer, footerTemplate);
- }
+  const footer = await loadTemplate('../partials/footer.html');
+  const header = await loadTemplate('../partials/header.html');
+
+
+  const footerTemplate = document.getElementById('footer');
+  const headerTemplate = document.getElementById('header');
+
+  renderWithTemplate(footer, footerTemplate);
+  renderWithTemplate(header, headerTemplate);
+  }
 
  loadHeaderFooter();
