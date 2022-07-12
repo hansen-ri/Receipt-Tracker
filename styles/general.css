@@ -148,6 +148,17 @@ nav div:nth-child(1) {
     padding-left: 5%;
 }
 
+.nav_link {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    transition: all .2s ease-in-out;
+}
+
+.nav_link:hover {
+    transform: scale(1.3);
+}
+
 #search_icon {
     font-size: x-large;
     margin: 0;
