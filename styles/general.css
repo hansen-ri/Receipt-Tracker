@@ -51,19 +51,26 @@ main {
 
 .gallery {
     background-color: var(--page_blue);
-    border: dashed 2px red;
+    /* border: dashed 2px red; */
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.receipt_preview {
-    border: dashed 2px purple;
+.gallery li {
+    /* border: dashed 2px purple; */
     width: 150px;
     height: 150px;
     margin: 5px;
-    text-align: center;
-    background-image: url("");
+    text-align: center; 
+}
+
+.receipt-preview p {
+    text-transform: capitalize;
+}
+
+.receipt-total::before {
+    content: "$";
 }
 
 footer {
@@ -135,8 +142,6 @@ nav {
     align-items: center;
     width: 100%;
     background-color: var(--logo_blue);
-    padding: 10px;
-    gap: 20px;
     z-index: 2;
     position: absolute;
     top: 85px;
@@ -144,8 +149,24 @@ nav {
     grid-row: 2 / 3; */
 }
 
+nav form {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav div {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: all .2s ease-in-out;
+}
+
+nav div:hover {
+    transform: scale(1.05);
+    background-color: var(--page_blue);
+}
+
 nav div:nth-child(1) {
-    padding-left: 5%;
+    padding-left: 2%;
 }
 
 .nav_link {
@@ -153,10 +174,7 @@ nav div:nth-child(1) {
     color: black;
     font-weight: 700;
     transition: all .2s ease-in-out;
-}
-
-.nav_link:hover {
-    transform: scale(1.3);
+    padding: 15px;
 }
 
 #search_icon {
@@ -181,6 +199,10 @@ nav div:nth-child(1) {
     flex-grow: 2;
     align-self: flex-end;
     padding-right: 5%;
+}
+
+ul {
+    list-style: none;
 }
 
 
