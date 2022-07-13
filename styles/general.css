@@ -58,7 +58,7 @@ main {
 }
 
 .gallery li {
-    /* border: dashed 2px purple; */
+    border: solid 2px var(--logo_blue);
     width: 150px;
     height: 150px;
     margin: 5px;
