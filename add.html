@@ -5,33 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/general.css" />
-    <title>Reciept Tracker | Add Reciept</title>
+    <script src="scripts/index.js" type="module"></script>
+    <script src="scripts/add.js"></script>
+    <title>Add Reciept | Reciept Tracker</title>
   </head>
   <body>
-    <header>
-      <div id="banner">
-        <img
-          src="images/Untitled_Artwork.png"
-          alt="Receipt Logo"
-          id="logo_img"
-        />
-        <button id="login_btn">Login</button>
-        <nav>
-          <div><a href="index.html" >Home</a></div>
-          <div><a class="active" href="add.html">Add Receipt</a></div>
-          <div><a>View All</a></div>
-          <form action="" id="search_bar">
-            <input type="search" placeholder="Search..." name="search" />
-            <button id="search_icon" type="submit"></button>
-          </form>
-        </nav>
-      </div>
+    <header id="header">
     </header>
-    <main>
+    <main class="add-main">
         <div id="addForm">
             <h2>Add New Receipt</h2>
-            <form method="post">
+            <form action="add-success.html" method="post" name="addReceipt">
                 <fieldset>
+                    <!-- <input name="user_id" value=""> -->
                     <label for="store">Store</label>
                     <input name="store" type="text">
 
@@ -44,7 +30,7 @@
                     <input name="date" type="date">
                     <label for="total">Total</label>
                     <span class="currency-symbol">$
-                    <input class="amount" name="total" type="number" placeholder="123.45"></span>
+                    <input class="amount" name="total" type="number" step="any" min="0" placeholder="123.45"></span>
                     <label for="purchase_type">Category</label>
                     <select name="purchase_type">
                         <option value="">Select a Category</option>
@@ -52,18 +38,23 @@
                         <option value="entertainment">Entertainment</option>
                         <option value="gas">Gas</option>
                         <option value="grocery">Groceries</option>
+                        <option value="hobbies">Hobbies</option>
                         <option value="rent">Rent</option>
                         <option value="utilities">Utilities</option>
                         <option value="other">Other</option>
                     </select>
                     <label for="imagefile">Upload Image</label>
-                    <input type="file" name="imagefile" id="imagefile">
-                    <button><input type="submit" name="addReceipt" id="addReceiptBtn"></button>
+                    <input type="file" name="imagefile" id="imagefile" id="fileToLoad" onchange="imageConvert()">
+                    <button id="addReceiptBtn"><input type="submit" name="addReceipt" ></button>
                 </fieldset>
             </form>
         </div>
+        <section>
+          <h2>Image Preview</h2>
+          <img id="image-preview" alt="receipt image preview">
+        </section>
       
     </main>
-    <footer></footer>
+    <footer id="footer"></footer>
   </body>
 </html>
