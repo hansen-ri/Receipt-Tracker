@@ -1,0 +1,32 @@
+[{
+    "_id": {
+      "$oid": "62cc87b4038a250011e20fab"
+    },
+    "connection": "virtual-receipt-wallet",
+    "client_id": "ym3cOJMljCo76IkoBcHyitmUqQzAe7sm",
+    "email": "john.doe@gmail.com",
+    "username": "johndoe35",
+    "password": "$2b$10$uxryNjXw0f5Dw4Fil2jmG.TWPsiCtYYEoNqC7bCGklZ9UHAkWfKEu",
+    "tenant": "dev-zql-y9ma",
+    "transaction": {
+      "id": "K7u9lxMihWNgRcy9qdiUvssflavMcdPS",
+      "locale": "en",
+      "protocol": "oidc-implicit-profile",
+      "requested_scopes": [
+        "openid",
+        "profile",
+        "email"
+      ],
+      "acr_values": [],
+      "ui_locales": [],
+      "redirect_uri": "https://virtual-receipts.herokuapp.com/callback",
+      "prompt": [],
+      "state": "eyJyZXR1cm5UbyI6Imh0dHBzOi8vdmlydHVhbC1yZWNlaXB0cy5oZXJva3VhcHAuY29tIn0",
+      "login_hint": null,
+      "response_mode": "form_post",
+      "response_type": [
+        "id_token"
+      ]
+    },
+    "request_language": "en-US,en;q=0.9"
+  }]

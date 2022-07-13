@@ -1,3 +1,4 @@
+
 function convertToText(res) {
    if (res.ok) {
      return res.text();
@@ -19,6 +20,7 @@ function convertToText(res) {
      clone = callback(clone, data);
    } 
    parent.appendChild(clone);
+   console.log('rendered header and footer');
  };
 
  async function loadHeaderFooter() {
