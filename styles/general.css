@@ -209,9 +209,9 @@ ul {
 /* ----------- ADD RECEIPT FORM -------------- */
 
 #addForm {
-    margin: 5em auto auto;
+    margin: auto;
     width: 50%;
-    
+    margin-bottom: 5em;
 }
 
 #addForm h2{
@@ -246,6 +246,15 @@ ul {
     padding: .8em;
     margin: 10px 3em ;
     /* margin:10px 0 20px 0; */
+}
+
+.add-main section {
+    margin-bottom: 50px;
+    border: 1px solid black;
+}
+
+.add-main section img {
+    max-width: 50%;
 }
 
 
