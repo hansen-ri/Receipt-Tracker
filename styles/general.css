@@ -9,6 +9,7 @@
 
 body {
     margin: 0;
+    font-size: 18px;
 }
 
 header {
@@ -213,7 +214,25 @@ nav {
 .add-main section img {
     max-width: 50%;
 }
+#addReceiptBtn {
+    padding: 2em;
+    /* font-size: ; */
+}
 
+/* ---------------- SUCCESS PAGE ------------------ */
+
+.success-main{
+    text-align: center;
+    margin: auto;
+}
+
+.success-main p a:hover{
+    color: white;
+}
+
+.success-main p a{
+    color: black;
+}
 
 
 
