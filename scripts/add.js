@@ -26,7 +26,11 @@ function imageConvert() {
 
       reader.addEventListener("load", function () {
         // convert image file to base64 string
+        // let inputValue = document.querySelector("input[type=file]");
+        // inputValue.setAttribute('value', reader.result);
         image.src = reader.result;
+        
+        console.log(reader.result);
       }, false);
     
       if (file) {
