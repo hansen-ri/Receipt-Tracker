@@ -30,8 +30,6 @@ export default class RenderReceiptLink {
     };
     // Loop through the data and create a link for each receipt
     data.forEach((receipt) => {
-      // Console log the reciept store
-      //   console.log(`Store: ${receipt.store}`);
       // select the container for the receipt links
       const receiptLinksContainer = document.querySelector(".gallery");
       // create a html template for each receipt

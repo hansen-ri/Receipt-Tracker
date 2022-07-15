@@ -30,7 +30,8 @@ h4{
 
 p,
 a,
-label{
+label,
+#filterReceiptBtn {
     font-family: var(--body_font);
 }
 
@@ -51,19 +52,67 @@ main {
 }
 
 .gallery {
+    padding: 0px 0px 0px 0px;
     background-color: var(--page_blue);
-    /* border: dashed 2px red; */
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filtered-gallery {
+    padding: 0px 0px 0px 0px;
+    background-color: var(--page_blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
 }
 
+.filtered-gallery img {
+    max-width: 100%
+}
+
+.image {
+    flex-basis: 40%
+}
+
+.filtered-gallery li, 
 .gallery li {
     border: solid 2px var(--logo_blue);
     width: 150px;
-    height: 150px;
+    height: 200px;
     margin: 5px;
     text-align: center; 
+}
+
+.filtered-gallery li {
+    border: solid 2px var(--logo_blue);
+    width: 400px;
+    height: 500px;
+    margin: 10px;
+    text-align: center; 
+}
+
+.wrapper {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* 
+.receipt-preview img {
+    visibility: hidden;
+    height: 100px;
+    width: 50px;
+} */
+
+.receipt-preview img{
+    
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .receipt-preview p {
@@ -206,6 +255,33 @@ ul {
     list-style: none;
 }
 
+/* ----------- FILTER RECEIPT FORM -------------- */
+
+#filterForm fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px 10px 30px;
+    border: 1px solid rgb(158, 158, 158);
+    background-color: aliceblue;
+    
+}
+
+#filterForm h2 {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#field_id, #value_id {
+    border-radius: px solid black;
+    border: none;
+    border: 1px solid black;
+    padding: .8em;
+    margin: 10px 3em ;
+    /* margin:10px 0 20px 0; */
+}
 
 /* ----------- ADD RECEIPT FORM -------------- */
 
@@ -236,17 +312,6 @@ ul {
 #addForm .amount{
     width: 95%;
     margin-top: -25px;
-}
-
-
-
-#addForm input, #addForm select {
-    border-radius: 4px solid black;
-    border: none;
-    border-bottom:1px solid black;
-    padding: .8em;
-    margin: 10px 3em ;
-    /* margin:10px 0 20px 0; */
 }
 
 .add-main section {
