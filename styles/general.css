@@ -227,40 +227,63 @@ ul {
     background-color: white;
 }
 
-#addForm label, #addForm span {
+#addForm label {
     margin: 3em 3em 10px;
 }
 
-.currency-symbol
-
-#addForm .amount{
-    width: 95%;
-    margin-top: -25px;
+.currency-symbol {
+    width: 85%;
+    margin: 18px 0em -13px 2.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid black;
 }
 
-
+#addForm .amount{
+    width: 75%;
+    margin-top: -25px;
+    margin-left: 4em;
+    margin-right: 3em;
+}
 
 #addForm input, #addForm select {
     border-radius: 4px solid black;
     border: none;
     border-bottom:1px solid black;
     padding: .8em;
-    margin: 10px 3em ;
+    margin: 0px 3em ;
     /* margin:10px 0 20px 0; */
 }
 
+#addForm input:focus{
+    border:none;
+    border-bottom: 1px solid var(--page_blue);
+}
+
 .add-main section {
-    margin-bottom: 50px;
-    border: 1px solid black;
+    margin-bottom: 6em;
+    text-align: center;
+    width: 70%;
+    margin: auto;
 }
 
 .add-main section img {
     max-width: 50%;
+    margin: auto;
 }
+
 #addReceiptBtn {
-    padding: 2em;
-    /* font-size: ; */
+    padding: 1em;
+    margin: 3em ;
+    font-size: 20px;
 }
+
+#addReceiptBtn:hover {
+    background-color: var(--logo_blue);
+    transition: ease .8s;
+    border-radius: 4px;
+}
+
+
 
 /* ---------------- SUCCESS PAGE ------------------ */
 
