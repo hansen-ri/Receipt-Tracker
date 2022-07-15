@@ -6,7 +6,7 @@ export default class RenderReceiptLink {
   async init() {
     // fetch data from Heroku API
     const response = await fetch(
-      `https://virtual-receipts.herokuapp.com/receipt/${this.userId}`
+      `https://virtual-receipt2.herokuapp.com/receipt/${this.userId}`
     );
     const data = await response.json();
     console.log(data);

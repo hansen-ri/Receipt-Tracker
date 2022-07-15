@@ -211,6 +211,10 @@ ul {
     list-style: none;
 }
 
+#footer_link {
+    text-decoration: none;
+    color: black;
+}
 
 /* ----------- ADD RECEIPT FORM -------------- */
 
