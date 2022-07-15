@@ -15,98 +15,43 @@
   <body>
     <header id="header"></header>
     <main class="index-main">
+      <div id="filterForm"> 
+        <form action="" method="post" name="filterReceipts" id="filter-form">
+          <h2>Filter Receipts by...</h2>
+          <fieldset>
+            <div>
+              <label for="field">Field</label>
+              <input name="field" type="text" id="field_id">
+            </div>
+            <div>
+              <label for="value">Value</label>
+              <input name="value" type="text" id="value_id">
+            </div>
+            <div>
+              <button id="filterReceiptBtn" type="submit">Filter Receipt</button>
+            </div>
+          </fieldset>
+      </form>
+
+      </div>
+
       <div>
         <!-- Example receipt -->
-        <ul class="gallery">
-          <li>
-            <div class="receipt-preview">
-              <p class="receipt-retailer"></p>
-              <p class="receipt-type"></p>
-              <p class="receipt-total"></p>
-              <p class="receipt-date"></p>
-            </div>
-          </li>
-          <li>
-            <div class="receipt-preview"> 
-              <p class="receipt-retailer">walmart</p>
-              <p class="receipt-type">groceries</p>
-              <p class="receipt-total">62.65</p>
-              <p class="receipt-date">12-07-2022</p>
-              <div>
-              </li>
-              
-              <div class="receipt_preview">
-                <p class="receipt_retailer">Domino's Pizza</p>
-                <p class="receipt_type">Food</p>
-                <p class="receipt_total">$34.12</p>
-                <p class="receipt_date">Apr 7, 2022</p>
-              </div>
-              <div class="receipt_preview">
-                <p class="receipt_retailer">Maverick</p>
-                <p class="receipt_type">Gas</p>
-                <p class="receipt_total">$69.42</p>
-                <p class="receipt_date">Apr 6, 2022</p>
-              </div>
-              <div class="receipt_preview">
-                <p class="receipt_retailer">Rocky Mtn Electric</p>
-                <p class="receipt_type">Utilities</p>
-                <p class="receipt_total">$29.62</p>
-                <p class="receipt_date">Apr 6, 2022</p>
-              </div>
-              <div class="receipt_preview">
-                <p class="receipt_retailer">Wendy's</p>
-                <p class="receipt_type">Food</p>
-                <p class="receipt_total">$31.92</p>
-                <p class="receipt_date">Apr 5, 2022</p>
-              </div>
-              <div class="receipt_preview">
-                <p class="receipt_retailer">Cafe Rio</p>
-                <p class="receipt_type">Food</p>
-                <p class="receipt_total">$14.65</p>
-                <p class="receipt_date">Apr 4, 2022</p>
-              </div>
-              <!--  -->
-              <div class="receipt_preview">
-                <p class="receipt_retailer">Wendy's</p>
-                <p class="receipt_type">Food</p>
-                <p class="receipt_total">$31.92</p>
-                <p class="receipt_date">Apr 5, 2022</p>
-              </div>
-              <div class="receipt_preview">
-                <p class="receipt_retailer">Cafe Rio</p>
-                <p class="receipt_type">Food</p>
-                <p class="receipt_total">$14.65</p>
-                <p class="receipt_date">Apr 4, 2022</p>
-              </div>
-              <div class="receipt_preview">
-                <p class="receipt_retailer">Wendy's</p>
-                <p class="receipt_type">Food</p>
-                <p class="receipt_total">$31.92</p>
-                <p class="receipt_date">Apr 5, 2022</p>
-              </div>
-              <div class="receipt_preview">
-                <p class="receipt_retailer">Cafe Rio</p>
-                <p class="receipt_type">Food</p>
-                <p class="receipt_total">$14.65</p>
-                <p class="receipt_date">Apr 4, 2022</p>
-              </div>
-              <div class="receipt_preview">
-                <p class="receipt_retailer">Walmart</p>
-                <p class="receipt_type">Groceries</p>
-                <p class="receipt_total">$124.56</p>
-                <p class="receipt_date">Apr 12, 2022</p>
-              </div>
-              <div class="receipt_preview">
-                <p class="receipt_retailer">Domino's Pizza</p>
-                <p class="receipt_type">Food</p>
-                <p class="receipt_total">$34.12</p>
-                <p class="receipt_date">Apr 7, 2022</p>
-              </div>
-            </ul>
-          </div>
-        </main>
+        <ul class="filtered-gallery">
+          
+        </ul>
+      </div>
+
+      <div>
+        <!-- Example receipt -->
+        <ul class="gallery" id="gallery">
+        </ul>
+      </div>
+    </main>
+
     <footer id="footer"></footer>
   </body>
   <script src="scripts/data.js" type="module"></script>
   <script src="scripts/RenderReceiptLink.js" type="module"></script>
+  <script src="scripts/RenderFilteredLink.js" type="module"></script>
   </html>
