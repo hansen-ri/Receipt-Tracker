@@ -1,5 +1,7 @@
 const baseURL = "virtual-receipts.herokuapp.com/"
 
+let base64Image;
+
 function formDataToJson(form) {
     const formData = new FormData(form),
     convertedJson = {};
@@ -36,6 +38,9 @@ function imageConvert() {
       if (file) {
         reader.readAsDataURL(file);
       }
+      base64Image = reader.result;
+
+      // return base64Image;
 }
 
 // create function that awaits response of data sent adn send user to success page
@@ -55,19 +60,26 @@ async function submitReceipt(payload){
 async function addReceiptSuccess(){
     const formElement = document.forms['addReceipt'];
     const json = formDataToJson(formElement);
+    json.imagefile = base64Image;
+    console.log(json);
+    try{
     const res = await submitReceipt(json);
     console.log(res);
+    location.assign('/add-success.html')
+    }catch (err){
+      console.log('there was an error sending something')
+    }
 }
 
 
 
-// document.getElementById('addReceiptBtn').addEventListener('onclick', (e) => {
-//     e.preventDefault();
-//     var myForm = document.forms[0];
-//     var chk_status = myForm.checkValidity();
-//     myForm.reportValidity();
-//     if(chk_status)
-//       addReceiptSuccess();;
-//   });
+document.getElementById('addReceiptBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    var myForm = document.forms[0];
+    var chk_status = myForm.checkValidity();
+    myForm.reportValidity();
+    if(chk_status)
+      addReceiptSuccess();;
+  });
 
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/general.css" />
     <script src="scripts/index.js" type="module"></script>
-    <script src="scripts/add.js"></script>
+    <script src="scripts/add.js" defer></script>
     <title>Add Reciept | Reciept Tracker</title>
   </head>
   <body>
@@ -15,24 +15,25 @@
     <main class="add-main">
         <div id="addForm">
             <h2>Add New Receipt</h2>
-            <form action="add-success.html" method="post" name="addReceipt">
+            <form action="" method="post" name="addReceipt">
                 <fieldset>
+                    <input hidden value="62cc87b4038a250011e20fab" for="user_id">
                     <!-- <input name="user_id" value=""> -->
                     <label for="store">Store</label>
-                    <input name="store" type="text">
+                    <input name="store" type="text" required>
 
                     <label for="city">City</label>
-                    <input name="city" type="text">
+                    <input name="city" type="text" required>
                     <label for="state">State</label>
-                    <input name="state" type="text">
+                    <input name="state" type="text" required>
 
                     <label for="date">Date</label>
-                    <input name="date" type="date">
+                    <input name="date" type="date" required>
                     <label for="total">Total</label>
-                    <span class="currency-symbol">$
-                    <input class="amount" name="total" type="number" step="any" min="0" placeholder="123.45"></span>
+                    <span class="currency-symbol">$</span>
+                    <input class="amount" name="total" type="number" step="any" min="0" placeholder="123.45" required>
                     <label for="purchase_type">Category</label>
-                    <select name="purchase_type">
+                    <select name="purchase_type" required>
                         <option value="">Select a Category</option>
                         <option value="clothing">Clothing</option>
                         <option value="entertainment">Entertainment</option>
@@ -44,13 +45,13 @@
                         <option value="other">Other</option>
                     </select>
                     <label for="imagefile">Upload Image</label>
-                    <input type="file" name="imagefile" id="imagefile" id="fileToLoad" onchange="imageConvert()">
+                    <input type="file" name="imagefile" id="imagefile" id="fileToLoad" onchange="imageConvert()" required>
                     <!-- <button id="addReceiptBtn"><input type="submit" name="addReceipt" ></button> -->
                     <button id="addReceiptBtn" type="submit">Add Receipt</button>
                 </fieldset>
             </form>
         </div>
-        <section>
+        <section class="image-preview-section">
           <h2>Image Preview</h2>
           <img id="image-preview" alt="receipt image preview">
         </section>
