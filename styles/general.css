@@ -118,6 +118,11 @@ footer {
     /* border: solid 2px black; */
 }
 
+#logout_btn {
+    position: absolute;
+    right: 45px;
+}
+
 #login_btn {
     max-width: 150px;
     min-width: 100px;
