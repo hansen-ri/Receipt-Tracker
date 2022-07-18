@@ -1,6 +1,6 @@
-const baseURL = "virtual-receipts.herokuapp.com/"
+const baseURL = "https://virtual-receipts.herokuapp.com/"
 
-let base64Image;
+var base64Image;
 
 function formDataToJson(form) {
     const formData = new FormData(form),
@@ -31,14 +31,14 @@ function imageConvert() {
         // let inputValue = document.querySelector("input[type=file]");
         // inputValue.setAttribute('value', reader.result);
         image.src = reader.result;
-        
+        base64Image = reader.result;
+
         console.log(reader.result);
       }, false);
     
       if (file) {
         reader.readAsDataURL(file);
       }
-      base64Image = reader.result;
 
       // return base64Image;
 }
@@ -58,6 +58,7 @@ async function submitReceipt(payload){
 
 // creat async function that calls formdatatojson and to send data on submit.  
 async function addReceiptSuccess(){
+  console.log(base64Image);
     const formElement = document.forms['addReceipt'];
     const json = formDataToJson(formElement);
     json.imagefile = base64Image;
